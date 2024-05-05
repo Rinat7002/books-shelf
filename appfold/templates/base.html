@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ title }} - library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% block styles %}
+    {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    {% block nav_style_auth %}{% endblock %}
+    <script type="text/javascript" src="static/js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="name-site">
+            Книжная полка
+        </div>
+
+        <div class="heading">
+            <h1 id="headname"></h1>
+        </div>
+
+
+        <div class="container">
+        <nav class="nav_menu">
+            <ul class="menu">
+                {% for item in navmenu %}
+                    <li class="menu-item">
+                        <!-- Проверяем, соответствует ли адрес текущему адресу запроса и добавляем класс active -->
+                        <a href="{{ item.addr }}" class="menu-link {% if item.addr == request.path %}active{% endif %}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+    </header>
+
+    <figure>
+        <img class="bg-image" src="{{ url_for('static', filename='img/lb-max.jpg') }}" alt="background-image">
+    </figure>
+
+    {% block content %}{% endblock %}
+    {% block content_login %}{% endblock %}
+    {% block all_requests %}{% endblock %}
+
+
+    <footer class="footer">
+        <div class="link">
+            <a class="link__tg" href="https://t.me/Wizard700" target="_blank">
+                <span class="link__tg-item">Идрисов Ринат</span>
+                <img class="link__tg-img" src="static/img/tg.svg" alt="">
+             </a>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js" defer></script>
+
+    {% block sortjs %}{% endblock %}
+    {% block skillsjs %}{% endblock %}
+    {% block formsend %}{% endblock %}
+</body>
+</html>

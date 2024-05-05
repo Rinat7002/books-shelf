@@ -1,0 +1,336 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    /* background-color: #0C1C2B; */
+}
+
+
+.name-site {
+    /* display: inline; */
+
+    /* display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative; */
+
+    color: #BC9216;
+    background-color: #371D2A;
+    font-size: 82px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+
+    text-align: center;
+    justify-content: center;
+}
+
+
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.description {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15); 
+    background-color: rgba(88, 23, 210, 0.35); 
+    border-radius: 50px;
+    /* padding: 5px; Отступы вокруг текста */
+
+    color: #F4B830;
+    /* background-color: #371D2A; */
+    font-size: 35px;
+    /* margin: 150px 0px 0px; */
+    /* padding: 0px 200px; */
+    padding: 0 50px;
+    margin: 10px 150px;
+    font-family: 'Inter', sans-serif;
+    /* text-align: center; */
+    /* justify-content: center; */
+    font-weight: 700;
+    text-align: justify;
+    position: relative;
+    
+    /* top: 30%;
+    left: 25%; */
+    /* width: 50%; */
+    /* height: 40%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.button-start {
+    border-radius: 78px;
+    font-family: 'Inter', sans-serif;
+    
+    color: #32F017;
+    background-color: #3B274C;
+
+    font-size: 20px;
+    width: 250px;
+    height: 70px;   
+    margin: 0px auto; /* auto для центрирования по горизонтали */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    position: relative;
+    top: 55%;
+    left: 1%;
+    width: 50%;  
+}
+
+.button-start:hover {
+    background-color: #42374C;
+    
+}
+
+
+.menu-link {
+    background-color: #0F1C3D;
+    border-radius: 15px;
+    padding: 0 5px;
+    color: #58A0FC;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.article-base__p {
+    background-color: rgba(255, 255, 255, 0.077);
+    color: #F4B830;
+    padding: 10px 30px;
+    border-radius: 30px;
+    max-width: 550px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 16px;
+  }
+  
+  .menu-item {
+    margin-right: 70px;  
+  }
+
+
+.menu a.active {
+    color: #E4DC23;
+    color: #32F017;
+}
+
+#list {
+    margin-top: 10px;
+}
+
+.link__tg {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* position: absolute;
+    top: 95%;
+    left: 1% */
+}
+
+.link__tg-item {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.link__tg-item:hover {
+    color: #29B6F6;
+}
+
+.footer {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #371D2A;
+    padding: 2px;
+}
+
+.table-dark {
+    position: relative;
+    top: 50%;
+    left: 1%;
+    width: 50%;
+}
+
+.table-dark__name {
+    color: #fff;
+}
+
+#headname {
+    display: inline-block;
+    color: #F4CA16;
+    background-color: #3B274C;
+    padding: 3px 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.feedback-form {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    color: #32F017;
+    display: inline-block;
+    margin-left: 500px;
+    transform: scale(1.3);
+    transform-origin: top left;
+    position: relative;
+    /* 
+    margin-top: 150px;
+    position: relative;
+    scale: 150%; */
+
+    /* text-align: center; */
+    /* margin-left: 50px; */
+    /* position: absolute; */
+    /* top: 90%; */
+    /* margin-top: -280px;
+    margin-left: 30px;  */
+    /* left: 50%; */
+    /* margin-left: 500px; */
+    /* margin: 50px; */
+}
+
+#comments {
+    width: 30%;
+    height: 100px;
+}
+
+.th-sort-by-number {
+    cursor: pointer;
+}
+
+
+.auth, .form-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#sendbtnlog{
+    background-color: #3A006D;
+    border-radius: 10px;
+    margin-left: 150px;
+}
+
+#sendbtn {
+    background-color: #3A006D;
+    border-radius: 10px;
+    margin-left: 50px; 
+}
+
+.auth-data, .form-auth {
+    margin-left: 450px;
+    padding: 0px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #32F017;
+    background-color: rgb(255, 255, 255, 0.23);
+}
+
+.section-books {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.section-books div {
+    margin-right: 20px; /* Добавляет немного промежутка между элементами */
+}
+
+.section-books p {
+    width: 200px;
+    text-decoration: none;
+    color: #fff;
+ }
+
+ .section-books p:hover {
+    color: #32F017;
+ }
+
+.article-base__img {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.article-base {
+    margin: 30px;
+}
+
+
+.article-base__h3 {
+    /* display: inline-block; */
+    display: flex;
+    padding: 10px 0px;
+
+    justify-content: center;
+    text-align: center;
+
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: rgb(58, 0, 109);
+    max-width: 500px;
+
+}
+
+.article-base__h3:hover {
+    color: #32F017;
+    cursor: pointer;
+}
+
+.section-articles {
+    display: flex;
+}
+
+.article-top100books {
+    width: 587px;
+    height: 302px;
+}
+
+.article-base__img, .book-img{
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.table-top100books {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #3A006D;
+}
+
+.table-top100books th, td {
+    border: 1px solid black;
+    padding: 8px; /* добавим отступ вокруг содержимого ячеек */
+}
+
+
+.form-auth {
+    /* display: inline-block; */
+    background-color: #29b5f648;
+}

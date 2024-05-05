@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css')}}">
+{% endblock %}
+
+{% block content %}
+<main id="account">
+
+    <div class="auth-data">
+        <p>Ваш логин: {{ session.get('user')  }}</p>
+        <p>Ваша почта: {{ session.get('userMail') }}</p>
+
+        <div class="all_requests">
+            <p id="allreqs">Все запросы:</p>
+            <ul>
+                {% for table_name, entries in all_reqs.items() %}
+    <!--                <li>{{ table_name }}</li>-->
+                    <ul>
+                        {% for entry in entries %}
+                            <li>{{ entry.name }} : {{ entry.seq }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+
+</main>
+{% endblock %}
